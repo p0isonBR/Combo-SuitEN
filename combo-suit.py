@@ -133,7 +133,7 @@ try:
                     combo=combo.replace('|',':')
             change(combo)
 
-    print(f'{C}[{G}+{C}] {G}Operation successfully!!{C}')
+    print(f'{C}[{G}+{C}] {G}Operation successfully!{C}')
 except(KeyboardInterrupt):
     print(f'{C}[{R}-{C}] User interrupt.')
     exit(f'{Y}Ctrl-C pressed{C}')
