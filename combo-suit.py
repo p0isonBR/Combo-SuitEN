@@ -88,7 +88,7 @@ print(f'''{C}Select the operation mode:
 ''')
 
 try:
-    tool=input(f'{C}select ({G}1 {C}or {G}2{C}): ')
+    tool=input(f'{C}Select ({G}1 {C}or {G}2{C}): ')
 
     db=open(input(f'{C}[{G}+{C}] Combolist directory: {B}'), 'rb').read().decode('utf-8',errors='ignore').splitlines()
 
