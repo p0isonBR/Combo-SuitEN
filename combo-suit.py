@@ -103,8 +103,8 @@ try:
                     sepdom(host, combo)
         except(AttributeError):
                     print(f'{C}[{R}-{C}]{Y} You must change the separator before ({C}| {Y}to {C}:{Y}).'); time.sleep(3)
-                    ex=input(f'{C}[{Y}-{C}] Make it now?? [{G}y{C}/{Y}n{C}]:{B} ')
-                    if ex=='y' or ex=='Y' or ex=='yes' or ex=='Yes':
+                    ex=input(f'{C}[{Y}-{C}] Make it now?? [{G}y{C}/{Y}n{C}]:{B} ').lower()
+                    if ex=='y' or ex=='yes':
                             new=input(f'{C}[{G}*{C}] Choose a name for the output file:{B} ')
                             txt=sepdir+'/'+new+'.txt'
                             for combo in db:
@@ -123,7 +123,7 @@ try:
                             exit()
                     
     elif tool=='2':
-        txt=input(f'{C}[{G}*{C}]Choose a name for the output file:{B} ')
+        txt=input(f'{C}[{G}*{C}] Choose a name for the output file:{B} ')
         txt=sepdir+'/'+txt+'.txt'
         for combo in db:
             try:
