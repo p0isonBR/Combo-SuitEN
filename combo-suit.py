@@ -99,7 +99,7 @@ try:
             os.mkdir(dir)
         try:
             for combo in db:
-                    host=re.search('@(.*):', combo).group(1)
+                    host=re.search('@(.*?):', combo).group(1)
                     sepdom(host, combo)
         except(AttributeError):
                     print(f'{C}[{R}-{C}]{Y} You must change the separator before ({C}| {Y}to {C}:{Y}).'); time.sleep(3)
@@ -113,7 +113,7 @@ try:
                             db=open(txt, 'rb').read().decode('utf-8',errors='ignore').splitlines()
                             try:
                                     for combo in db:
-                                            host=re.search('@(.*):', combo).group(1)
+                                            host=re.search('@(.*?):', combo).group(1)
                                             sepdom(host, combo)
                             except:
                                     print(f'{C}[{G}+{C}] {G}Operation successfully!{C}')
