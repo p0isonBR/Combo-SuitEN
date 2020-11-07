@@ -59,10 +59,10 @@ print(f'''{B}*By PoisonBR
 workdir=os.path.join('/', 'sdcard', 'ComboSuitByPoisonBR')
 if not os.path.exists(workdir):
     os.mkdir(workdir)
-domdir=os.path.join('/', 'sdcard', 'ComboSuitByPoisonBR', 'PorDominio')
+domdir=os.path.join('/', 'sdcard', 'ComboSuitByPoisonBR', 'ByDomain')
 if not os.path.exists(domdir):
     os.mkdir(domdir)
-sepdir=os.path.join('/', 'sdcard', 'ComboSuitByPoisonBR', 'Separador')
+sepdir=os.path.join('/', 'sdcard', 'ComboSuitByPoisonBR', 'CharChange')
 if not os.path.exists(sepdir):
     os.mkdir(sepdir)
 
@@ -90,11 +90,11 @@ print(f'''{C}Select the operation mode:
 try:
     tool=input(f'{C}Select ({G}1 {C}or {G}2{C}): ')
 
-    db=open(input(f'{C}[{G}+{C}] Combolist directory: {B}'), 'rb').read().decode('utf-8',errors='ignore').splitlines()
+    db=open(input(f'{C}[{G}+{C}] Enter the path to combolist file: {B}'), 'rb').read().decode('utf-8',errors='ignore').splitlines()
 
     if tool=='1':
         dir=input(f'{C}[{G}*{C}] Choose a name for the output folder:{B} ')
-        dir=os.path.join('/', 'sdcard', 'ComboSuitByPoisonBR', 'PorDominio',dir)
+        dir=os.path.join('/', 'sdcard', 'ComboSuitByPoisonBR', 'ByDomain',dir)
         if not os.path.exists(dir):
             os.mkdir(dir)
         try:
@@ -119,7 +119,7 @@ try:
                                     print(f'{C}[{G}+{C}] {G}Operation successfully!{C}')
                                     exit()
                     else:
-                            print(f'{C}[{R}-{C}] Saindo...{C}')
+                            print(f'{C}[{R}-{C}] Exiting...{C}')
                             exit()
                     
     elif tool=='2':
